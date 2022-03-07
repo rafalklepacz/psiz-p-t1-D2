@@ -6,8 +6,17 @@
 List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
-	
-	return pRoot;
+
+	if (pRoot)
+	{
+		pRoot->pPlateNum = (char*)"pRoot";
+		pRoot->entryTime = std::time(nullptr);
+		pRoot->pNext = NULL;
+
+		return pRoot;
+	}
+
+	return NULL;
 }
 
 void deinitList(List* pRoot)
