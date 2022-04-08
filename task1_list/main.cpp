@@ -9,9 +9,17 @@ int main()
 	List* pFirstFloor = initList();
 	List* pSecFloor = initList();
 
-	addCar(pFirstFloor, (char*)"asdasd");
-	addCar(pFirstFloor, (char*)"asdasd");
-	printf("%d\n", numberOfElements(pFirstFloor));
+	addCar(pFirstFloor, (char*)"qwe");
+	addCar(pFirstFloor, (char*)"asd");
+	addCar(pFirstFloor, (char*)"zxc");
+
+	printf("numberOfElements: %d\n", numberOfElements(pFirstFloor));
+	printAll(pFirstFloor);
+
+	removeCar(pFirstFloor, (char*)"zxc");
+
+	printf("numberOfElements: %d\n", numberOfElements(pFirstFloor));
+	printAll(pFirstFloor);
 	
 	deinitList(pFirstFloor);
 	deinitList(pSecFloor);
